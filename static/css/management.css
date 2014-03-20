@@ -1,0 +1,55 @@
+#dem-table input{
+  width: 40px;
+  height: 21px;
+}
+
+.thumbnail.isdefault{
+border: 1px solid #FF0000;
+}
+.controls input[type='text'],
+.controls input[type='number'],
+.controls input[type='url']{
+  height:21px;
+}
+#id_category{
+  min-height:200px;
+}
+.form-horizontal{
+  max-width: 700px;
+}
+.alert a {
+    color: #2980B9;
+}
+textarea {
+    padding: 8px 5px;
+}
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+.product-img-ul li{
+     position: relative; 
+     width: 100%; /* for IE 6 */
+} 
+
+.product-img-ul .product-img-hover{
+   position: absolute; 
+   top: 0px; 
+   right: 5px; 
+   width: 100%;
+}
+ul.product-img-ul li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ul.product-img-ul li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+

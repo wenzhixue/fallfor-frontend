@@ -1,0 +1,463 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>FallFor | Discover Design You'll Fall For</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    
+    
+    
+       <!-- Le styles -->
+    
+    <link href="https://d3ltqlcsk1pxob.cloudfront.net/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="https://d3ltqlcsk1pxob.cloudfront.net/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="https://d3ltqlcsk1pxob.cloudfront.net/bootstrap/css/prettify.css" rel="stylesheet">
+    <link href="./static/css/flat-ui.css" rel="stylesheet">
+
+    <link href="./static/css/july.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="https://d3ltqlcsk1pxob.cloudfront.net/images/favicon.ico">
+    <meta property="twitter:account_id" content="1422364268" />
+    
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            font-family: "Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;
+        }
+    </style>
+
+    
+
+<style type="text/css">
+
+.new-payment-title{
+  background: #eaeae3;
+  padding: 10px 15px;
+  margin-top:0px;
+
+}
+
+.payment-area{
+border: 1px solid #d9d9d9;
+-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+        border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+#payment-box .span5{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.payment-errors{
+  color:red;
+}
+
+.order-confirm{
+  border: 2px solid #ebece8;
+  border-radius: 6px;
+  text-shadow: none;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+.address-confrim p{
+  margin:0px;
+}
+.credit-select{
+  padding-left:25px;
+  padding-right: 25px;
+}
+.credit-select > table{
+  margin-bottom: 10px;
+}
+.form-horizontal .control-label{
+  width:130px;
+}
+.form-horizontal .controls {
+    margin-left: 135px;
+}
+#payment-form{
+  margin-top: 10px;
+}
+
+</style>
+
+
+
+    
+    
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("a5b351608c3005abfb769ab21ea98115");</script><!-- end Mixpanel -->
+</head>
+
+<body>
+
+      <div class="top-notify-bar" >
+  <div class="top-notify-bar-inner" >
+      <div class="top-notify-slogan">Free Shipping. Free Returns. Discover Design You'll Fall For.</div>
+    <div class="top-notify-options">
+      <span>
+        <span class="icon-envelope top-notify-email"></span>
+          <a class="top-notify-email-text" href="mailto:info@fallfor.com">Email Us</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="top-nav-wrapper" style="height: 60px;">
+<div class="navbar" data-spy="affix" data-offset-top="28">
+  <div class="navbar-inner header-inner" style="background-color:white;" >
+
+  <div class="container inner-container" style="border-bottom: 1px solid #D5D5D5;" >
+    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="brand" href="/"><img src="https://d3ltqlcsk1pxob.cloudfront.net/img/fallfor_icon.png" style='width:150px;margin-top:8px;'></a>
+    <div class="nav-collapse collapse">
+      <ul class="nav pull-right">
+        
+        <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Account <b class="caret" style="margin-left: 0;margin-top: 5px;"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                      <li><a href="/shopping/orders/">Orders</a></li>
+                      <li><a href="#">Favorites</a></li>
+                      <!--<li><a href="/settings/basic/">Settings</a></li>-->
+                      <li class="divider"></li>
+                      <li><a href="/accounts/logout/">Logout</a></li>
+                    </ul>
+        </li>
+        
+        <li id="tabContact"><a id="cart-link" href="/shopping/cart/"><i class='icon-shopping-cart' ></i>Cart<span id="cart-item-count" class="cart-count">2</span></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->          
+  </div><!--container-->
+
+
+ 
+
+  </div><!--navbar-inner-->
+</div><!--navbarbar-->
+
+
+</div><!--top-navbar-wrapper-->
+<!--Cart popover-->
+<div class="hide" id="cart-popover" >
+  <div >
+      <table id="cart-popover-items">
+        
+        <tr class="hide"><td colspan=2>Order sub total:</td>
+        <td>$</td>
+        </tr>
+      </table> 
+          
+      <p id="no-item-cart" class="">
+      There are no items in your cart
+      </p>
+      
+      
+      <p id="no-free-shipping" class="alert ajax-cart-shipping ">
+        <strong class="ajax-cart-shipping-title">FREE SHIPPING</strong> to US and Canada.
+      </p>
+      <p id="is-free-shipping" class="alert ajax-cart-shipping hide">
+        Your order is eligible for <strong class="ajax-cart-shipping-title">FREE SHIPPING</strong>
+      </p>
+
+      <p>
+        <a class="btn" href="#" data-dismiss="popoverx">Continue shopping</a>
+        <a  class="btn btn-success" href="/shopping/cart/">Checkout</a>
+      </p>
+  </div>      
+</div>
+<!--Cart popover-->
+
+    <div class="container main-container">
+    
+
+<div class="row-fluid shopping-steps">
+    
+    <div id="shopping-step-shipping" class="span4 alert step-block">
+    <div class="pull-left"><span class="step-icon"></span></div>
+    <div class="step-text">Step 1:   Shipping</div>
+    </div>
+
+    <div id="shopping-step-payment" class="span4 alert step-block">
+    <div class="pull-left"><span class="step-icon"></span></div>
+    <div class="step-text">Step 2:   Payment</div>
+    </div>
+
+    <div id="shopping-step-confirm" class="span4 alert step-block">
+    <div class="pull-left"><span class="step-icon"></span></div>
+    <div class="step-text">Step 3:   Confirm</div>
+    </div>
+</div>
+
+<form id="payment-form" class="form-horizontal" method="POST" action="/shopping/payment/" ><input type='hidden' name='csrfmiddlewaretoken' value='U3ZBPicyHQWFjFMie3NetWcWwvTMMGYB' />
+<div class="payment-area">
+  <h3 class="new-payment-title"><span class="fui-lock" style="padding-right:5px"></span>Secure Payments(SSL encrypted)
+    <img style="padding-top: 3px;" class="pull-right"src="https://d3ltqlcsk1pxob.cloudfront.net/images/stripe/solid.png"/>
+  </h3>
+    <div id="payment-box" class="row">
+
+      <div class="span5">
+        
+      <div style="margin-left:130px;"><h3>Credit Card</h3>
+          <label style="margin-bottom: 10px; margin-top: 10px;"><span class="red-required">*</span>Required Field
+        </label>
+        <p class="payment-errors hide" style="margin-left:120px"></p>
+      </div>
+
+
+        <div class="control-group">
+          <label class="control-label" >Full Name<span class="red-required">*</span></label>
+          <div class="controls">
+            <input type="text"  class="input-xlarge" data-stripe="name" value="asfsadf"/>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" >Card Number<span class="red-required">*</span></label>
+          <div class="controls">
+            <input type="text"  class="input-xlarge" data-stripe="number"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+        <p style="margin-bottom: 5px;"><img alt="" title="" src="./static/img/credit_card_logos_43.gif" width="214" height="30" border="0" /></p>
+          </div>
+        </div>
+
+
+
+        <div class="control-group">
+          <label class="control-label" >Expiration Date<span class="red-required">*</span></label>
+          <div class="controls">
+            <input type="text" size="2" class="input-xlarge"  style="width:20%" placeholder="MM" data-stripe="exp-month"/>
+            <span>/</span>
+            <input type="text" size="4" class="input-xlarge" style="width:30%"  placeholder="YYYY" data-stripe="exp-year"/>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" >CVC<span class="red-required">*</span></label>
+          <div class="controls">
+            <input type="text" size="4" class="input-xlarge" data-stripe="cvc"/>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+          <button  class="btn btn-block btn-success" style="width:85%"type="submit">Submit Payment</button>
+         </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+          <p>You will not be charged until you review the order at next page.</p>
+          </div>
+        </div>
+      </div>
+      <div class="span5" style="margin-left:0px;">
+        <div style="margin-left:135px;"><h3>Billing Address</h3>
+        <label class="checkbox" for="checkbox1" style="margin-bottom: 10px; margin-top: 10px;">
+          <input type="checkbox" value="" id="checkbox1" checked="checked" data-toggle="checkbox">
+          Same as shipping address
+        </label>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Address1<span class="red-required">*</span></label>
+          <div class="controls">
+           <input type="text" class="input-xlarge billing-address" data-default="sdfsadf" data-stripe="address_line1"/>
+         </div>
+       </div>
+       <div class="control-group">
+        <label class="control-label">Address2</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge billing-address" data-default="" data-stripe="address_line2"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">City<span class="red-required">*</span></label>
+        <div class="controls">
+          <input type="text" class="input-xlarge billing-address" data-default="sadfasdf" data-stripe="address_city"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">State<span class="red-required">*</span></label>
+        <div class="controls">
+          <input type="text" class="input-xlarge billing-address" data-default="sadfasdf" data-stripe="address_state"/>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label">Zip Code<span class="red-required">*</span></label>
+        <div class="controls">
+         <input type="text" class="input-xlarge billing-address" data-default="123123" data-stripe="address_zip"/>
+       </div>
+     </div>
+     <div class="control-group">
+      <label class="control-label">Country<span class="red-required">*</span></label>
+      <div class="controls">
+        <input type="text" class="input-xlarge billing-address" data-default="USA" data-stripe="address_country"/>
+      </div>
+    </div>
+  </div>
+
+</div>  
+
+</div>
+</form>
+
+<div class="alert alert-info " style="margin-top:10px;background-color: #EAECEF;">
+  <div class="row-fluid">
+
+    <div class="span5 address-confrim">
+      <h4>Ship to</h4>
+      <p>asfsadf, sdfsadf, </p>
+      <p>sadfasdf, sadfasdf, USA, 123123</p>
+
+    </div>
+    <div class="span2 offset1">
+      <h4>Item Total</h4>
+      <p>$60.00</p>
+    </div>
+    <div class="span2">
+      <h4>Shipping</h4>
+      <p>$0.00</p>
+    </div>
+    <div class="span2">
+      <h4>Order Total</h4>
+      <p>$60.00</p>
+    </div>
+  </div>
+</div>
+
+    
+    <div class="footer">
+ <div class="navbar navbar-inner"  style="margin-bottom: 0px;">
+    <p><span>© 2014 Fresh July, Inc.</span> 
+
+<span class="socialLinks">
+      <span><a target="_blank" href="http://www.twitter.com/fallfor_designs/"><span class="footericon newTwIcon"></span></a></span>
+      <span><a target="_blank" href="http://facebook.com/fallfordesign/"><span class="footericon newFbIcon"></span></a></span>
+      <span><a target="_blank" href="http://www.pinterest.com/fallfordesigns/"><span class="footericon newTumblrIcon"></span></a></span>
+      <span><a target="_blank" href="http://instagram.com/fallfordesigns"><span class="footericon newInstagramIcon"></span></a></span>
+</span>
+
+
+    <span class="pull-right"><a href="/aboutUs/">About Us</a> | <a href="/privatePolicy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a> | <a href="/contactUs/">Contact Us</a></span>
+    </p>
+    
+ </div>
+</div>
+
+    </div>
+
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/jquery.stacktable.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/bootstrap-popover.js"></script>
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/bootstrapx-popoverx.js"></script>
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/bootstrap-affix.js"></script>
+    
+    <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/july.js"></script>
+    
+    
+  <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/flatui-checkbox.js"></script>
+  <script type="text/javascript" src="https://d3ltqlcsk1pxob.cloudfront.net/js/flatui-radio.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+      shopping_steps('payment');
+      $('[data-toggle="checkbox"]').checkbox('check');
+      $('[data-toggle="radio"]').each(function () {
+        $(this).radio();
+      });
+
+
+      $('.billing-address').each(function () {
+          $(this).val($(this).data('default'));
+      });
+ 
+      $('[data-toggle="checkbox"]').on('toggle', function(e) {
+       if( $(this).parent().hasClass('checked'))
+       {
+        $('.billing-address').each(function () {
+          $(this).val($(this).data('default'))
+        });
+       }else{
+        $('.billing-address').each(function () {
+          $(this).val('')
+        });
+       }
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    // This identifies your website in the createToken call below
+    Stripe.setPublishableKey('pk_live_mDSDV0Lant9U36ymQ3iamtoE');
+ 
+    var stripeResponseHandler = function(status, response) {
+      var $form = $('#payment-form');
+ 
+      if (response.error) {
+        // Show the errors on the form
+        $('.payment-errors').show();
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('button').prop('disabled', false);
+      } else {
+        // token contains id, last4, and card type
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        mixpanel.track("payment new submit");
+        // and re-submit
+        $form.get(0).submit();
+      }
+    };
+    
+
+    jQuery(function($) {
+      $('#payment-form').submit(function(e) {
+        var $form = $(this);
+        $('.payment-error').empty();
+        $('.payment-error').hide();
+        // Disable the submit button to prevent repeated clicks
+         e.preventDefault();
+ 
+         $form.find('button').prop('disabled', true);
+ 
+        Stripe.createToken($form, stripeResponseHandler);
+        e.preventDefault();
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+    });
+    mixpanel.track("payment new page");
+  </script>
+
+
+</body>
+
+
+</html>
